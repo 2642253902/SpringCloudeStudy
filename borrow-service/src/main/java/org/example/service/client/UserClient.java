@@ -10,4 +10,4 @@ public interface UserClient {
 
     @RequestMapping("/user/{uid}")
     public User findUserById(@PathVariable("uid") int uid);
-}
+}  
