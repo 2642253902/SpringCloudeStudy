@@ -30,7 +30,6 @@ public class BorrowServiceImpl implements BorrowService {
     @Override
     public UserBorrowDetail getUserBorrowDetailByUid(int uid) {
         List<Borrow> borrow = mapper.getBorrowsByUid(uid);
-
         //这里通过调用getForObject来请求其他服务，并将结果自动进行封装
         //获取User信息
         User user = userClient.findUserById(uid);
