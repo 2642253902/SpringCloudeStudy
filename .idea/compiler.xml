@@ -14,6 +14,10 @@
         <module name="borrow-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gateway-server" target="17" />
+      <module name="hystrix-dashboard" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -22,6 +26,7 @@
       <module name="borrow-service" options="-parameters" />
       <module name="commons" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

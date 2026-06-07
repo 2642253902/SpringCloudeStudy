@@ -16,14 +16,14 @@ public class BorrowController {
     @Resource
     private BorrowService service;
 
-    @HystrixCommand(fallbackMethod = "onError")
+//    @HystrixCommand(fallbackMethod = "onError")
     @RequestMapping("/borrow/{uid}")
     public UserBorrowDetail findUserBorrows(@PathVariable("uid") int uid) {
         return service.getUserBorrowDetailByUid(uid);
     }
 
     // 备选方案：参数、返回值必须与原方法一致
-    public UserBorrowDetail onError(int uid) {
-        return new UserBorrowDetail(null, Collections.emptyList());
-    }
+//    public UserBorrowDetail onError(int uid) {
+//        return new UserBorrowDetail(null, Collections.emptyList());
+//    }
 }
