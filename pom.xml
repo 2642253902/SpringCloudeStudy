@@ -20,7 +20,7 @@
         <module>borrow-service</module>
         <module>commons</module>
         <module>eureka-server</module>
-        <module>gateway-server</module>
+        <module>gateway-server</m
     </modules>
     <properties>
         <java.version>17</java.version>
