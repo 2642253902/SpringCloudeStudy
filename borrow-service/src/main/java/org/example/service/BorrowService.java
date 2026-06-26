@@ -5,9 +5,6 @@ import org.example.entity.UserBorrowDetail;
 
 public interface BorrowService {
 
-    @Resource
-
-
 
     UserBorrowDetail getUserBorrowDetailByUid(int uid);
 }

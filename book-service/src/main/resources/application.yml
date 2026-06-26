@@ -14,3 +14,7 @@ spring:
         # 配置Nacos注册中心地址
         server-addr: localhost:8848
         namespace: 82c88e75-1b7f-4fef-a96f-e5acc2bd4938
+    sentinel:
+      transport:
+        # 添加监控页面地址即可
+        dashboard: localhost:8858
