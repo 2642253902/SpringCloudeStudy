@@ -8,4 +8,5 @@ public class User {
     String name;
     String sex;
     int age;
+    int ookCount;
 }

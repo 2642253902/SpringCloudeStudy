@@ -5,7 +5,6 @@ import jakarta.annotation.Resource;
 import org.example.entiey.User;
 import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,4 +27,14 @@ public class UserController {
         return service.getUserById(uid);
     }
 
+    @RequestMapping("/user/remain/{uid}")
+    public int userRemain(@PathVariable("uid") int uid) {
+        return service.getRemain(uid);
+    }
+
+    @RequestMapping("/user/borrow/{uid}")
+    public boolean userBorrow(@PathVariable("uid") int uid) {
+        int remain = service.getRemain(uid);
+        return service.setRemain(uid, remain - 1);
+    }
 }

@@ -1,5 +1,6 @@
 package org.example.mapper;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.example.entiey.Borrow;
@@ -16,4 +17,7 @@ public interface BorrowMapper {
 
     @Select("select * from DB_BORROW where bid = #{bid} and uid = #{uid}")
     Borrow getBorrow(int uid, int bid);
+
+    @Insert("insert into DB_BORROW(uid,bid) value (#{uid},#{bid})")
+    int addBorrow(int uid, int bid);
 }
