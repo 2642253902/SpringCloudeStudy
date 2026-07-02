@@ -5,12 +5,12 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     public void test() {
-        String str = "你们可能不知道只用20万赢到578万是什么概念";
-        //Base64不只是可以对字符串进行编码，任何byte[]数据都可以，编码结果可以是byte[]，也可以是字符串
-        String encodeStr = Base64.getEncoder().encodeToString(str.getBytes());
-        System.out.println("Base64编码后的字符串：" + encodeStr);
+        String header = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
+        String payload = "eyJleHAiOjE3ODMwMTc1ODYsInVzZXJfbmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNTFhNTRmMTAtMTg0Zi00OTgzLWJlMjEtNWY2NzU3NDk5NDQxIiwiY2xpZW50X2lkIjoid2ViIiwic2NvcGUiOlsiYm9vayIsInVzZXIiLCJib3Jyb3ciXX0";
 
-        System.out.println("解码后的字符串：" + new String(Base64.getDecoder().decode(encodeStr)));
+
+        System.out.println("header :  " + new String(Base64.getUrlDecoder().decode(header)));
+        System.out.println("payload:  " + new String(Base64.getUrlDecoder().decode(payload)));
     }
 
 }
