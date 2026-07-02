@@ -1,8 +1,25 @@
 server:
   port: 8280
 spring:
+  application:
+    name: borrow-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudstudy?useSSL=false&serverTimezone=UTC
     username: root
     password: root
+security:
+  oauth2:
+    client:
+      #不多说了
+      client-id: web
+      client-secret: 654321
+    resource:
+      #Token信息获取和校验地址
+      token-info-uri: http://localhost:8500/sso/oauth/check_token
+feign:
+  oauth2:
+    #开启Oauth支持，这样就会在请求头中携带Token了
+    enabled: true
+    #同时开启负载均衡支持
+    load-balanced: true

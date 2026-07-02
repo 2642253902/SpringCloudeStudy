@@ -1,8 +1,19 @@
 server:
   port: 8180
 spring:
+  application:
+    name: book-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudstudy?useSSL=false&serverTimezone=UTC
     username: root
     password: root
+security:
+  oauth2:
+    client:
+      #不多说了
+      client-id: web
+      client-secret: 654321
+    resource:
+      #Token信息获取和校验地址
+      token-info-uri: http://localhost:8500/sso/oauth/check_token
