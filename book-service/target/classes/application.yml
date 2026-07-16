@@ -6,3 +6,13 @@ spring:
     url: jdbc:mysql://localhost:3306/cloudstudy?useSSL=false&serverTimezone=UTC
     username: root
     password: root
+  rabbitmq:
+    addresses: 111.228.53.34
+    username: user
+    password: 123456Ok!
+    virtual-host: /
+  cloud:
+    stream:
+      bindings:
+        springCloudBusInput:
+          group: book-service
