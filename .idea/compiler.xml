@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-service" />
+        <module name="config-service" />
         <module name="book-service" />
         <module name="commons" />
         <module name="borrow-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth-service" target="1.8" />
       <module name="config-server" target="17" />
       <module name="eureka-server" target="17" />
       <module name="gateway-server" target="17" />
@@ -25,6 +27,7 @@
       <module name="book-service" options="-parameters" />
       <module name="borrow-service" options="-parameters" />
       <module name="commons" options="-parameters" />
+      <module name="config-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

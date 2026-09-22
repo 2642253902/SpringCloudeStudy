@@ -1,10 +1,11 @@
 package org.example.service.impl;
 
-import jakarta.annotation.Resource;
 import org.example.entiey.User;
 import org.example.mapper.UserMapper;
 import org.example.service.UserService;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class UserServiceImpl implements UserService {

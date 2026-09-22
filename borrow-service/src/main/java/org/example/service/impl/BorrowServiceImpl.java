@@ -1,6 +1,5 @@
 package org.example.service.impl;
 
-import jakarta.annotation.Resource;
 import org.example.entiey.Book;
 import org.example.entiey.Borrow;
 import org.example.entiey.User;
@@ -10,6 +9,7 @@ import org.example.service.BorrowService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 

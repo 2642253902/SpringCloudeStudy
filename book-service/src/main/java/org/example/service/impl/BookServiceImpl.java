@@ -1,10 +1,11 @@
 package org.example.service.impl;
 
-import jakarta.annotation.Resource;
 import org.example.entiey.Book;
 import org.example.mapper.BookMapper;
 import org.example.service.BookService;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class BookServiceImpl implements BookService {
